@@ -1,0 +1,52 @@
+{%extends "layout.html"%}
+
+{%block title%}open{%endblock%}
+
+
+{%block body%}
+<div class="context">
+    <h2>Title:{{data.title}}</h2>
+    <br>
+    <h2>Author:{{data.author}}</h2>
+    <br>
+    <h3>Year:{{data.year}}</h3>
+    <br>
+    <h3>ISBN:{{data.isbn}}</h3>
+    <br>
+    <h3>AVG Rating:{{average_rating}}</h3>
+    <br>
+    <h4>Reviwes</h4>
+    <p>{{work_ratings_count}}</p>
+</div>
+
+
+{%if reviews !=None%}
+{%for z in reviews%}
+<div class="avg">
+    <h4>{{z.usernmae}}</h4>
+    <h5>Rating:{{z.rating}}</h5>
+    <div class="context">
+        <p>{{z.review}}</p>
+    </div>
+</div>
+{%endfor%}
+{%endif%}
+<h5>Your Review</h5>
+<p>{{review}}</p>
+<div class="submit">
+    <form class='form-group ' action="{{url_for('open',isbn=data.isbn)}}" method="POST">
+        <h3>Rating:</h3>
+        <select name="Rate"  required>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+        <h4>Review</h4>
+        <textarea name="review" id="Rr" style="width:max-content"></textarea>
+        <input type="submit" value="send review">
+    </form>
+</div>
+<div class="api text-center"><a href='/api/{{data.isbn}}'>API</a></div>
+{%endblock%}

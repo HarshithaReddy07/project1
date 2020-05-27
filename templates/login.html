@@ -1,0 +1,40 @@
+{%extends "layout.html"%}
+    {%block title%}login{%endblock%}
+   
+
+    {%block body%}
+
+        &nbsp
+        <!--------------Bottom main-------------->
+        <div class="cardds" style="width: 18rem; height:20rem;">
+            <div class="card-body">
+                <form action="{{url_for('login')}}" method="post">  
+                <h5 class="card-title">Register</h5>
+                id <br>
+                <input type="text" placeholder="Enter id" name="username">
+                password <br>
+                <input type="password" placeholder="Enter password" name="password">
+                &nbsp
+                <button class="btn" type="submit">Register</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="position">
+            <div class="cards" style="width: 18rem; height:20rem;">
+                <div class="card-body">
+                    <form action="{{url_for('login')}}" method="post">
+                    <h5 class="card-title">LOG IN</h5>
+                    id <br>
+                    <input type="text" placeholder="Enter id" name="usernamelogin">
+                    password <br>
+                    <input type="password" placeholder="Enter password" name="passwordlogin">
+                    &nbsp
+                    <button class="btn" type="submit">Log In</button>
+                    </form> 
+                </div>
+            </div>
+        </div>
+    </main>
+    <!--------***---Bottom main---***-------->
+    {%endblock%}
