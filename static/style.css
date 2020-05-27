@@ -1,0 +1,73 @@
+
+/*-------Top part----------*/
+.main-title {
+    height:10vh;
+    background-color:rgb(13, 13, 14);
+}
+
+.title-name{
+    text-align: center;
+    font-size: 500px;
+    color:goldenrod;
+}
+/*-----****---Top part---****-----*/
+
+/*-----------Bottom main------------*/
+.cardds{
+    position: absolute;
+    left:250px;
+    background-color:rgb(243, 225, 122);
+}
+
+.cards{
+    position: relative;
+    left:800px;
+    background-color: rgb(243, 45, 45);
+}
+
+/*-----***---Bottom main---***------*/
+
+/*-------------Global-------------*/
+button.btn{
+    border-radius:5rem;
+    background-color: black;
+    color: white;
+    position : relative;
+    top:0.5rem;
+}
+
+button.btn:hover{
+    color:gold;
+}
+
+main{
+    background-color:silver;
+}
+/*-------***---Global---***-------*/
+
+
+.entire{
+    text-align: center;
+    position : relative;
+    top: 50px;
+}
+#idone,.entire>.btn{
+    position: relative;
+    top:1rem;
+    left:1rem;
+}
+
+.card{
+    position: relative;;
+    left:200px;
+    top:50px;
+}
+
+
+.cardz{
+    position:relative;
+    bottom:15rem;
+    left:850px;
+}
+
+
